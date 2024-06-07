@@ -1,0 +1,23 @@
+
+q
+java:S1192N"ODefine a constant instead of duplicating this literal "redirect:/list" 3 times.(×ëìúÿÿÿÿ8Î­„’ï1
+o
+java:S11927"MDefine a constant instead of duplicating this literal "registration" 3 times.(Š“‘øÿÿÿÿ8Ï­„’ï1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ú­„’ï1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ú­„’ï1
+j
+java:S4488""HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(±ÍÉçüÿÿÿÿ8å­„’ï1
+e
+java:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„øĞ‘8î­„’ï1
+j
+java:S44882"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ñ†Ñ²üÿÿÿÿ8û­„’ï1
+g
+java:S4488="JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(îÎ›˜8ó­„’ï1
+j
+java:S4488T"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(İÒãğÿÿÿÿÿ8®„’ï1
+g
+java:S4488`"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ªğı8ş­„’ï1
+e
+java:S4488}"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹§å8ş½ã’ï1

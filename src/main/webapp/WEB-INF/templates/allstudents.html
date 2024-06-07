@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>List of Students</h2>
+
+    <!-- Afficher le message de succès d'ajout ou de modification -->
+    <div th:if="${successMessage}" class="alert alert-success" role="alert">
+        <p th:text="${successMessage}"></p>
+    </div>
+
+    <!-- Afficher le message de succès de suppression -->
+    <div th:if="${deleteMessage}" class="alert alert-success" role="alert">
+        <p th:text="${deleteMessage}"></p>
+    </div>
+
+    <!-- Ajouter le formulaire de recherche -->
+    <form th:action="@{/search}" method="get" class="form-inline mb-3">
+        <input type="text" name="name" class="form-control mr-2" placeholder="Search by name...">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Nationality</th>
+            <th scope="col">CODE</th>
+            <th scope="col">ACTIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.birthDate}"></td>
+            <td th:text="${student.nationality}"></td>
+            <td th:text="${student.code}"></td>
+            <td>
+                <form th:action="@{/edit}" method="get" style="display: inline;">
+                    <input type="hidden" name="studentId" th:value="${student.id}" />
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+                <form th:action="@{/delete}" method="get" style="display: inline;">
+                    <input type="hidden" name="studentId" th:value="${student.id}" />
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/new}" class="btn btn-success">Add New Student</a>
+</div>
+</body>
+</html>
